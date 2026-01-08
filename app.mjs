@@ -2,9 +2,9 @@
 import { defineConfig, createNotesQuery } from "./.app/app-config.js";
 
 export default defineConfig({
-  title: "Eleventy Notes",
+  title: "Kyle David Stephens",
   description:
-    "A simple, lightweight, and flexible note-taking template for Eleventy.",
+    "A personal website, built using Eleventy Notes",
   editThisNote: {
     url: "https://github.com/rothsandro/eleventy-notes/edit/{{branch}}/{{file}}",
   },
