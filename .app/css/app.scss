@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "sass:meta";
+
+@use "./../../app" as app;
+
+@layer app {
+  @include meta.load-css(
+    "./1-tokens/tokens",
+    $with: (theme-name: map.get(app.$config, "theme"))
+  );
+
+  @include meta.load-css("./3-global/remedy");
+  @include meta.load-css("./3-global/theme-mode");
+  @include meta.load-css("./3-global/kbd");
+
+  @include meta.load-css("./4-components/code-block");
+  @include meta.load-css("./4-components/icon-btn");
+  @include meta.load-css("./4-components/note-link");
+  @include meta.load-css("./4-components/toggle-btn");
+
+  @include meta.load-css("./../lib/core/styles");
+  @include meta.load-css("./../lib/modules/callouts/styles");
+  @include meta.load-css("./../lib/modules/custom-props/styles");
+  @include meta.load-css("./../lib/modules/notes/styles");
+  @include meta.load-css("./../lib/modules/page-nav/styles");
+  @include meta.load-css("./../lib/modules/panel/styles");
+  @include meta.load-css("./../lib/modules/search/styles");
+  @include meta.load-css("./../lib/modules/sidebar/styles");
+  @include meta.load-css("./../lib/modules/tags/styles");
+  @include meta.load-css("./../lib/modules/themes/styles");
+  @include meta.load-css("./../lib/modules/toc/styles");
+  @include meta.load-css("./../lib/shared/styles");
+
+  @include meta.load-css("./5-utils/cloak");
+  @include meta.load-css("./5-utils/hide");
+  @include meta.load-css("./5-utils/inline");
+  @include meta.load-css("./5-utils/show");
+  @include meta.load-css("./5-utils/stack");
+  @include meta.load-css("./5-utils/visually-hidden");
+}
