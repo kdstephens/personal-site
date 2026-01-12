@@ -5,9 +5,9 @@ export default defineConfig({
   title: "Kyle David Stephens",
   description:
     "A personal website, built using Eleventy Notes",
-  editThisNote: {
-    url: "https://github.com/rothsandro/eleventy-notes/edit/{{branch}}/{{file}}",
-  },
+  // editThisNote: {
+  //   url: "https://github.com/rothsandro/eleventy-notes/edit/{{branch}}/{{file}}",
+  // },
   staticAssets: {
     paths: { "public/": "/" },
   },
@@ -24,7 +24,14 @@ export default defineConfig({
       },
     ],
   },
-  // sidebar: {
+  notes: {
+    // // Change the prefix to something else
+    // pathPrefix: "/articles",
+
+    // Remove the prefix entirely
+    pathPrefix: "/",
+  },
+  sidebar: {
     // links: [
     //   {
     //     url: "https://github.com/rothsandro/eleventy-notes",
@@ -37,8 +44,8 @@ export default defineConfig({
     //     icon: "coffee",
     //   },
     // ],
-    // sections: [
-    //   {
+    sections: [
+      // {
     //     label: "Introduction",
     //     groups: [
     //       {
@@ -49,57 +56,19 @@ export default defineConfig({
     //       },
     //     ],
     //   },
-    //   {
-    //     label: "Guides",
-    //     groups: [
-    //       {
-    //         label: "Writing Notes",
-    //         query: createNotesQuery({
-    //           pattern: "^/Writing/",
-    //           tree: {
-    //             replace: {
-    //               "^/\\w+": "",
-    //             },
-    //           },
-    //         }),
-    //       },
-    //       {
-    //         label: "Organizing Notes",
-    //         query: createNotesQuery({
-    //           pattern: "^/Organizing/",
-    //         }),
-    //       },
-    //       {
-    //         label: "Core Features",
-    //         query: createNotesQuery({
-    //           pattern: "^/Features/",
-    //           tree: {
-    //             replace: {
-    //               "^/\\w+": "",
-    //             },
-    //           },
-    //         }),
-    //       },
-    //       {
-    //         label: "Deployment",
-    //         query: createNotesQuery({
-    //           pattern: "^/Deployment/",
-    //         }),
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     label: "Releases",
-    //     groups: [
-    //       {
-    //         query: createNotesQuery({
-    //           pattern: "^/Releases/",
-    //         }),
-    //       },
-    //     ],
-    //   },
-    // ],
-  // },
+      {
+        label: "Programs",
+        groups: [
+          {
+            // label: "Programs",
+            query: createNotesQuery({
+              tags: ["program"],
+            }),
+          },
+        ],
+      },
+    ],
+  },
   // tags: {
   //   map: {
   //     "dynamic-content": "dynamic content",
