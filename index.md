@@ -1,4 +1,11 @@
-# Kyle David Stephens
+---
+navTitle: Home
+title: Kyle David Stephens
+headline: Kyle David Stephens
+panel: false
+# nextPage: "[[Getting started]]"
+---
+
 Dad, Scientist, Musician, Fun Guy (according to my mom). 
 
 <!-- ![Alt Me =x300](profile-pic.png) -->
