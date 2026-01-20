@@ -1,4 +1,5 @@
 ---
+title: Optical Illusions Program
 description: Educational program where I review how the eye works and several illusions related to depth, light and color. No screens used.  
 tags: perception, psychology, program
 ---
@@ -13,8 +14,8 @@ Of all the academic and creative pools I dip my toes in, I enjoy this one most. 
 
 This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, ligth, and color perception. No screens are used, but there are several handouts. 
 
-> [!tip]+ Handouts
-> Available for download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions)
+> [!note]+ Handouts
+> Available for download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions) 
 
 ### Upcoming Presentations
 
@@ -22,14 +23,14 @@ This is an educational program for all ages where I explain how the eye works an
 
 ### Past Presentations
 
-> [!example]- 2025
+> [!list]- 2025
 > `June 5` @ Atwater Village Branch Library, Los Angeles, CA
 >
 > `May 17` @ Mar Vista Branch Library, Los Angeles, CA
 >
 > `May 4` @ Robertson Branch Library, Los Angeles, CA
 
-> [!example]- 2024
+> [!list]- 2024
 > `July 15` @ El Sereno Branch Library, Los Angeles, CA
 >
 > `June 27` @ Panorama City Branch Library, Panorama City, CA
