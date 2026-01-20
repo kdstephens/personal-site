@@ -1,0 +1,17 @@
+.topic-notes {
+  padding-inline: 0;
+}
+
+.topic-note {
+  padding-block-start: var(--space-2);
+  padding-block-end: var(--space-5);
+  border-bottom: 1px solid var(--color-neutral-border);
+}
+
+.topic-note:last-child {
+  border-bottom: 0;
+}
+
+.topic-note__description {
+  color: var(--color-neutral-text-contrast);
+}
