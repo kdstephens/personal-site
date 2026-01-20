@@ -45,24 +45,36 @@ export default defineConfig({
     //   },
     // ],
     sections: [
-      // {
-    //     label: "Introduction",
-    //     groups: [
-    //       {
-    //         query: createNotesQuery({
-    //           pattern: "^/[^/]+$",
-    //           tags: ["basics"],
-    //         }),
-    //       },
-    //     ],
-    //   },
       {
-        label: "Programs",
+        label: "",
         groups: [
           {
-            // label: "Programs",
             query: createNotesQuery({
-              tags: ["program"],
+              pattern: "/Projects",
+              tree: true,
+            }),
+          },
+        ],
+
+      },
+      {
+        label: "",
+        groups: [
+          {
+            query: createNotesQuery({
+              pattern: "/Programs",
+              tree: true,
+            }),
+          },
+        ],
+      },
+      {
+        label: "",
+        groups: [
+          {
+            query: createNotesQuery({
+              pattern: "/Notes to Self",
+              tree: true,
             }),
           },
         ],
