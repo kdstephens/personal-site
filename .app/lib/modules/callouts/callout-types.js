@@ -29,6 +29,7 @@ export const calloutTypes = {
   ...define("bug", "red", Bug),
   ...define("example", "purple", List),
   ...define("quote", "gray", Quote, ["cite"]),
+  ...define("list", "gray", List),
 };
 
 function define(name, color, icon, aliases = [], type = name) {
