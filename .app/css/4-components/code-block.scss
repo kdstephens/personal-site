@@ -1,4 +1,20 @@
-@use "prism-themes/themes/prism-material-light.css";
+@use "sass:meta";
+
+@media (prefers-color-scheme: dark) {
+  @include meta.load-css("prism-themes/themes/prism-one-dark.css");
+}
+
+@media (prefers-color-scheme: light) {
+  @include meta.load-css("prism-themes/themes/prism-one-light.css");
+}
+
+:root[data-theme="dark"] {
+  @include meta.load-css("prism-themes/themes/prism-one-dark.css");
+}
+
+:root[data-theme="light"] {
+  @include meta.load-css("prism-themes/themes/prism-one-light.css");
+}
 
 .code-block {
   position: relative;
