@@ -2,6 +2,7 @@ import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItTaskCheckbox from "markdown-it-task-checkbox";
 import markdownItFootnote from "markdown-it-footnote";
+import { imgSize } from "@mdit/plugin-img-size";
 import { wikilinksModule } from "./../modules/wikilinks/index.js";
 import { notesModule } from "./../modules/notes/index.js";
 import { calloutsModule } from "./../modules/callouts/index.js";
@@ -16,6 +17,9 @@ export const markdownLibrary = (eleventyConfig) => {
     html: true,
     linkify: true,
   })
+    .use(externalLinksPlugin)
+    .use(figureCaptionsPlugin)
+    .use(imgSize)
     .use(markdownItTaskCheckbox)
     .use(markdownItFootnote)
     .use(notesModule.copyCodeMarkdownPlugin)
@@ -37,3 +41,51 @@ export const markdownLibrary = (eleventyConfig) => {
 
   return lib;
 };
+
+function externalLinksPlugin(md) {
+  const defaultRender =
+    md.renderer.rules.link_open ||
+    function (tokens, idx, options, env, self) {
+      return self.renderToken(tokens, idx, options);
+    };
+
+  md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    const href = token.attrGet("href") || "";
+
+    if (isExternalLink(href)) {
+      token.attrSet("target", "_blank");
+      token.attrSet("rel", "noopener");
+    }
+
+    return defaultRender(tokens, idx, options, env, self);
+  };
+}
+
+function isExternalLink(href) {
+  if (!href) return false;
+  if (href.startsWith("#")) return false;
+  if (href.startsWith("/")) return false;
+  if (href.startsWith("mailto:")) return false;
+  if (href.startsWith("tel:")) return false;
+  return /^https?:\/\//i.test(href);
+}
+
+function figureCaptionsPlugin(md) {
+  const defaultRender =
+    md.renderer.rules.image ||
+    function (tokens, idx, options, env, self) {
+      return self.renderToken(tokens, idx, options);
+    };
+
+  md.renderer.rules.image = function (tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    const title = token.attrGet("title");
+    const imageHtml = defaultRender(tokens, idx, options, env, self);
+
+    if (!title) return imageHtml;
+
+    const caption = md.utils.escapeHtml(title);
+    return `<figure class="figure">${imageHtml}<figcaption class="figure__caption">${caption}</figcaption></figure>`;
+  };
+}
