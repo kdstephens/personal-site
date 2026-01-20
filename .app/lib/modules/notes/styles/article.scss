@@ -170,6 +170,23 @@
     background-color: transparent !important;
   }
 
+  img,
+  figure {
+    margin-inline: auto;
+  }
+
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  .figure__caption {
+    margin-block-start: var(--space-2);
+    font-size: var(--font-size-fluid-x0);
+    color: var(--color-neutral-text);
+    text-align: center;
+  }
+
   .footnotes-sep {
     border-style: solid;
     border-color: var(--color-neutral-line);
