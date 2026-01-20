@@ -41,6 +41,17 @@ panel: true
     </div>
 
     <script src="/app.js" data-base="{{ '/' | htmlBaseUrl }}"></script>
+    
+    {% if mermaid %}
+      <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ 
+          startOnLoad: true,
+          theme: 'neutral',
+        });
+      </script>
+    {% endif %}
+
 
     <div aria-hidden="true" hidden>
       {{ 'hash' | icon({ id: 'icon-hash', width: null, height: null }) | safe }}
