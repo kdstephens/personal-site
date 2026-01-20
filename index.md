@@ -1,16 +1,32 @@
 ---
 navTitle: Home
 title: Kyle David Stephens
-headline: Kyle David Stephens
+headline: 🥳
 panel: false
 # nextPage: "[[Getting started]]"
 ---
 
-Dad, Scientist, Musician, Fun Guy (according to my mom). 
+## Kyle-related items. Assembled by Kyle himself.
 
-<!-- ![Alt Me =x300](profile-pic.png) -->
+Hey, I'm Kyle. 
+
+This site is an assemblage of me-related things. Part portfolio, part journal, part catalogue of notes-to-self. In short, I put things here that I don't want to forget. 
+
+The format is evolving, but for now the site is organized as follows: 
+ - 👉 [[Projects]]
+ - 👉 [[Programs]]
+ - 👉 [[Notes to Self]]
+
+<!-- ![Alt Me =x300](profile-pic.png)
 <div style="text-align: center;">
     <img src="profile-pic.png" alt="Me" height="500" />
-</div>
+</div> -->
 
-Website coming soon.   
+### Links out ↗
+
+<div class="link-grid">
+  <a class="link-btn" href="https://www.linkedin.com/in/kyle-stephens-phd/" target="_blank" rel="noopener">LinkedIn</a> |
+  <a class="link-btn" href="https://github.com/kdstephens/" target="_blank" rel="noopener">GitHub</a> |
+  <a class="link-btn" href="https://scholar.google.com/citations?hl=en&user=Ag6x3CkAAAAJ&view_op=list_works" target="_blank" rel="noopener">Google Scholar</a> |
+  <a class="link-btn" href="https://www.discogs.com/artist/2729361-Kyle-Stephens" target="_blank" rel="noopener">Discogs</a>
+</div>
