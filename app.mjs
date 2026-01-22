@@ -2,7 +2,7 @@
 import { defineConfig, createNotesQuery } from "./.app/app-config.js";
 
 export default defineConfig({
-  title: "Kyle David Stephens",
+  title: "Kyle D Stephens 🥳",
   description:
     "A personal website, built using Eleventy Notes",
   // editThisNote: {
