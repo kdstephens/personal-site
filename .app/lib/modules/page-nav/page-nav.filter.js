@@ -18,7 +18,8 @@ export const pageNavFilter = (eleventyConfig) => {
       {
         slugify: eleventyConfig.getFilter("slugifyPath"),
         slugifyAnchor: eleventyConfig.getFilter("slugify"),
-        resolveTitle: (note) => note.data?.navTitle || note.data?.title || note.title,
+        resolveTitle: (note) =>
+          note?.data?.navTitle || note?.data?.title || note?.title,
       }
     );
 
