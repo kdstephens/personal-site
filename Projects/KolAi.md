@@ -1,6 +1,6 @@
 ---
 title: KolAi
-description: "A company I started to make laser finishing files for denim using machine learning. The technology was acquired at by another company at the end of 2025."
+description: "A company I started to make laser finishing files for denim using machine learning. The technology was acquired by another company at the end of 2025."
 tags: ["project", "machine learning", "denim"]
 sort: 2
 ---

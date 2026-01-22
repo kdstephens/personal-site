@@ -6,7 +6,7 @@ sort: 2
 ---
 
 > [!info]- Second part of 3-part series
-> This is the second part in a 3-part series about using RunPod to share Streamlit apps. You can view the other two parts here: 
+> This is the second part in a 3-part series about using RunPod to share Streamlit apps. Here are the other two parts: 
 >
 > (1) [[Setting up RunPod]]
 >
@@ -16,23 +16,23 @@ For work, I often make backend APIs for clients (typically with [FastAPI](https:
 
 However, I sometimes need to demo a tool first, so a client can gauge the functionality and decide if it's something they want to incorporate. To make demos, I like to use [Streamlit](https://streamlit.io/) because it's easy and the UI looks nice. 
 
-If you make an app with Streamlit, you can deploy it for free using [Streamlit Community Cloud](https://streamlit.io/cloud), but if your demo requires more than basic computing resources &mdash; e.g., if you need a GPU &mdash; than this won't work. 
+When I make an app with Streamlit, I can deploy it for free using [Streamlit Community Cloud](https://streamlit.io/cloud), but if my demo requires more than basic computing resources &mdash; e.g., if I need a GPU &mdash; then this won't work. 
 
-In this case, you can share the app using RunPod with an exposed HTTP port. 
+In this case, I can share the app using RunPod with an exposed HTTP port. 
 
 
 ## Exposing HTTP ports in RunPod
 
-When you click to add a Pod to your Network Volume, click "edit" on the Pod template (under "Configure Deployment"). Then, on the pop-up modal ("Pod Template Overrides"), you have the option to Expose HTTP Ports: 
+When adding a Pod to a Network Volume, click "edit" on the Pod template (under "Configure Deployment"). Then, on the pop-up modal ("Pod Template Overrides"), there is an option to Expose HTTP Ports: 
 
 ![Alt RunPod Expose HTTP Port =500x](assets/images/runpod_http-port.png "RunPod Expose HTTP Ports")
 
-The default port for Streamlit is 8501, so set this. Then, when you click on your deployed pod, the HTTP Service link is the one you can share once your Streamlit app is running: 
+The default port for Streamlit is 8501, so set this. Then, clicking on the deployed Pod shows an HTTP Service link I can share once the Streamlit app is running: 
 
 ![Alt RunPod HTTP Service link =500x](assets/images/runpod_http-link.png "RunPod HTTP Service link")
 
 > [!info]- Multiple Exposed Ports
-> If your Pod already has an exposed HTTP Port (many come with Port 8888 exposed for Jupyter Lab), you can add more as a comma-separated list (e.g., *8888,8501*).  
+> If the Pod already has an exposed HTTP Port (many come with Port 8888 exposed for Jupyter Lab), I can add more as a comma-separated list (e.g., *8888,8501*).  
 
 
 ## Guide to setting up a Streamlit App in RunPod
@@ -74,7 +74,7 @@ if not check_password():
 #...
 ```
 
-Then, add a `secrets.toml` file to `.streamlit/` with a password you can share with your colleagues 
+Then, add a `secrets.toml` file to `.streamlit/` with a password to share with colleagues.
 
 ```python
 #.streamlit/secrets.toml
@@ -82,7 +82,7 @@ APP_PASSWORD = "YourCustomPassword"
 ```
 
 > [!warning]- Add to .gitignore
-> Make sure to add `secrets.toml` or `.streamlit/` to `.gitignore` so you don't inadvertantly share the password publicly. 
+> Make sure to add `secrets.toml` or `.streamlit/` to `.gitignore` so I don't inadvertently share the password publicly. 
 
 Here's what this looks like for the user: 
 
@@ -90,13 +90,13 @@ Here's what this looks like for the user:
 
 ### Step 4: Shell script to run Streamlit app
 
-To run a Streamlit app locally, you just type something like this in your terminal:
+To run a Streamlit app locally, I'll type something like this in the terminal:
 
 ```shell
 streamlit run app/streamlit_app.py
 ``` 
 
-However, when running a Streamlit app from RunPod, there are a few more flags you need to pass to make it work properly: 
+However, when running a Streamlit app from RunPod, there are a few more flags I need to pass to make it work properly: 
 ```shell
 streamlit run app/streamlit_app.py \
 
@@ -115,16 +115,16 @@ streamlit run app/streamlit_app.py \
 # Disabling CSRF (XSRF) token checks avoids issues related to how RunPod serves the app:
   --server.enableXsrfProtection false
 ```
-I recommend putting all of this into a shell script on `/workspace`, so you can just type `/workspace/start_streamlit.sh` to start the app from a terminal connected to the pod. 
+I recommend putting all of this into a shell script on `/workspace`, so I can just type `/workspace/start_streamlit.sh` to start the app from a terminal connected to the pod. 
 
 #### Example shell script: 
 
 ```shell
 #!/usr/bin/env bash
-set -e                  # Imediately exit script in case of errors
+set -e                  # Immediately exit script in case of errors
 source /workspace/venvName/bin/activate # Activate virtual env
 
-cd /workspace/git-repo  # Repository with the code you want to run
+cd /workspace/git-repo  # Repository with the code I want to run
 
 streamlit run app/streamlit_app.py \
   --server.address 0.0.0.0 \
@@ -134,6 +134,6 @@ streamlit run app/streamlit_app.py \
   --server.enableXsrfProtection false
 ```
 
-Obviously, change `/venvName/` to the name of your virtual environment and `/git-repo` to the name of your repository. 
+Obviously, change `/venvName/` and `/git-repo` to match the project. 
 
-Once your app is running, simply share the HTTP service link for your Pod (see image above) and anyone can access it!
+Once the app is running, simply share the HTTP service link to the Pod (see image above) and anyone can access it!

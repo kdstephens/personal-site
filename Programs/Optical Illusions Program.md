@@ -8,18 +8,18 @@ Sometime in late 2023, I applied to be a "performer" for the Los Angeles Public 
 
 I got booked for my first performance in May, 2024. I  have since done several more at libraries around Los Angeles. 
 
-Of all the academic and creative pools I dip my toes in, I enjoy this one most. Maybe you could come sometime?
+Of all the academic and creative pools I dip my toes in, I enjoy this one most. Maybe I'll see you sometime?
 
 ## Seeing is Believing: Fun with Optical Illusions
 
-This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, ligth, and color perception. No screens are used, but there are several handouts. 
+This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. No screens are used, but there are several handouts. 
 
 > [!note]+ Handouts
 > Available for download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions) 
 
 ### Upcoming Presentations
 
-`2026, Janury 29` &mdash; 4pm-5pm @ Westwood Branch Library, Los Angeles, CA
+`2026, January 29` &mdash; 4pm-5pm @ Westwood Branch Library, Los Angeles, CA
 
 ### Past Presentations
 
