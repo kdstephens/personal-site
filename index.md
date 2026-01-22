@@ -1,21 +1,26 @@
 ---
 navTitle: Home
-title: Kyle David Stephens
-headline: 🥳
+title: 
+headline: An assortment of Kyle-related items.
 panel: false
 # nextPage: "[[Getting started]]"
 ---
 
-## Kyle-related items. Assembled by Kyle himself.
+<!--## Kyle-related items. Assembled by Kyle himself.-->
 
-Hey, I'm Kyle. 
+<!-- <img src="profile-pic.png" alt="Kyle waving" class="intro-image" width="175" decoding="async"> -->
 
-This site is an assemblage of me-related things. Part portfolio, part journal, part catalogue of notes-to-self. In short, I put things here that I don't want to forget. 
+<img src="profile-pic-2.png" alt="Kyle waving" class="intro-image-2" width="150" decoding="async">
+
+This site is part portfolio, part journal, part catalogue of notes-to-self. In short, I put things here that I don't want to forget. 
 
 The format is evolving, but for now the site is organized as follows: 
  - 👉 [[Projects]]
  - 👉 [[Programs]]
  - 👉 [[Notes to Self]]
+
+
+<!--<div class="intro-clear"></div>-->
 
 <!-- ![Alt Me =x300](profile-pic.png)
 <div style="text-align: center;">
