@@ -9,5 +9,4 @@ topicNotesQuery:
     # Note must have the tag "project"
     - ["tags", "includes", "program"]
 panel: false
-nextPage: "[[Programs/Optical Illusions Program]]"
 ---

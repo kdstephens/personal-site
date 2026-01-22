@@ -9,5 +9,4 @@ topicNotesQuery:
     # Note must have the tag "project"
     - ["tags", "includes", "notes to self"]
 panel: false
-nextPage: "[[Notes to Self/Setting up Runpod]]"
 ---

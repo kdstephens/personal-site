@@ -9,5 +9,4 @@ topicNotesQuery:
     # Note must have the tag "project"
     - ["tags", "includes", "project"]
 panel: false
-nextPage: "[[Projects/Auto Karaoke]]"
 ---
