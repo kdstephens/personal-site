@@ -14,7 +14,15 @@ $neutral-color: map.get(themes.$neutrals, $theme-name);
 }
 
 @function color-value($color, $step, $alpha: false, $dark: false) {
-  $name: "#{$color}#{if($dark, "Dark", "")}#{if($alpha, "A", "")}#{$step}";
+  $dark-suffix: "";
+  $alpha-suffix: "";
+  @if $dark {
+    $dark-suffix: "Dark";
+  }
+  @if $alpha {
+    $alpha-suffix: "A";
+  }
+  $name: "#{$color}#{$dark-suffix}#{$alpha-suffix}#{$step}";
 
   @if map.has-key(colors.$values, $name) {
     @return map.get(colors.$values, $name);
