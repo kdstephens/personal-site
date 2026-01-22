@@ -139,6 +139,11 @@
     line-height: 1.5;
   }
 
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+
   pre {
     font-size: 14px;
     line-height: 1.375;
@@ -168,6 +173,35 @@
     padding: 0;
     word-break: break-all;
     background-color: transparent !important;
+  }
+
+  .intro-image {
+    display: block;
+    max-inline-size: 40%;
+    block-size: auto;
+    margin-inline: auto;
+    margin-block: var(--space-4) var(--space-4);
+  }
+
+  .intro-clear {
+    clear: both;
+  }
+
+  @include media-breakpoint-up("md") {
+    .intro-image {
+      float: right;
+      margin-inline-start: var(--space-4);
+      margin-inline-end: 0;
+      margin-block-start: var(--space-4);
+      border-radius: 40%;
+    }
+  }
+
+  .intro-image-2 {
+    display: block;
+    margin-top: -25px;
+    padding-top: 0;
+    border-radius: 50%;
   }
 
   img,
