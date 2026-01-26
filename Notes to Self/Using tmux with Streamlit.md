@@ -45,7 +45,7 @@ I like to give my sessions a name, so I don't get confused later. I've called th
 ```shell
 ./start_streamlit.sh
 ```
-Following from the [[Use Streamlit with RunPod|previous article in this series]], I assume I'm in the `/workspace` folder on my Pod and I've already written a shell script (`start_streamlit.sh`) that starts the Streamlit app. 
+Following from the [[Use Streamlit with RunPod|previous article in this series]], I assume I started my tmux session form the `/workspace` folder on my Pod and I've already written a shell script (`start_streamlit.sh`) that starts the Streamlit app. 
 
 ### 5. Detach from tmux session:
 Hit `ctrl+b` on the keyboard, then type `d`. 

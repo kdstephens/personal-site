@@ -4,15 +4,13 @@ description: Educational program where I review how the eye works and several il
 tags: perception, psychology, program
 ---
 
-Sometime in late 2023, I applied to be a "performer" for the Los Angeles Public Library (see: [perform at LAPL](https://www.lapl.org/about-lapl/perform-lapl)). I proposed an educational program based around optical illusions &mdash; *Seeing is Believing: Fun with Optical Illusions*.  I would explain how the eye works and present several illusions. It would be fun. All ages. No screens. 
+This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. It's called:
 
-I got booked for my first performance in May, 2024. I  have since done several more at libraries around Los Angeles. 
+**Seeing is Believing: Fun with Optical Illusions**
 
-Of all the academic and creative pools I dip my toes in, I enjoy this one most. Maybe I'll see you sometime?
+I've been presenting this at libraries around Los Angeles since May, 2024 and I very much enjoy it.
 
-## Seeing is Believing: Fun with Optical Illusions
-
-This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. No screens are used, but there are several handouts. 
+There are no screens used, but there are several handouts: 
 
 > [!note]+ Handouts
 > Available for download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions) 
