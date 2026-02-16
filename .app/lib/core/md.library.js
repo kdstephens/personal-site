@@ -3,6 +3,7 @@ import markdownItAnchor from "markdown-it-anchor";
 import markdownItTaskCheckbox from "markdown-it-task-checkbox";
 import markdownItFootnote from "markdown-it-footnote";
 import { imgSize } from "@mdit/plugin-img-size";
+import markdownItVideo from "markdown-it-video";
 import { wikilinksModule } from "./../modules/wikilinks/index.js";
 import { notesModule } from "./../modules/notes/index.js";
 import { calloutsModule } from "./../modules/callouts/index.js";
@@ -19,6 +20,7 @@ export const markdownLibrary = (eleventyConfig) => {
   })
     .use(externalLinksPlugin)
     .use(figureCaptionsPlugin)
+    .use(markdownItVideo)
     .use(imgSize)
     .use(markdownItTaskCheckbox)
     .use(markdownItFootnote)
@@ -39,6 +41,7 @@ export const markdownLibrary = (eleventyConfig) => {
       }),
     });
 
+  addVideoCaptions(lib);
   return lib;
 };
 
@@ -88,4 +91,52 @@ function figureCaptionsPlugin(md) {
     const caption = md.utils.escapeHtml(title);
     return `<figure class="figure">${imageHtml}<figcaption class="figure__caption">${caption}</figcaption></figure>`;
   };
+}
+
+function addVideoCaptions(md) {
+  const defaultRender = md.renderer.rules.video;
+  if (!defaultRender) return;
+
+  md.renderer.rules.video = function (tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    const raw = token.videoID || "";
+    const nextToken = tokens[idx + 1];
+    const { videoID, caption } = parseVideoCaption(raw, nextToken, md);
+
+    token.videoID = videoID;
+    const embed = defaultRender(tokens, idx, options, env, self);
+    token.videoID = raw;
+
+    if (!caption) return embed;
+
+    return `<figure class="figure figure--video">${embed}<figcaption class="figure__caption">${caption}</figcaption></figure>`;
+  };
+}
+
+function parseVideoCaption(raw, nextToken, md) {
+  const parts = raw.split("|");
+  if (parts.length >= 2) {
+    const videoID = parts.shift().trim();
+    const captionRaw = parts.join("|").trim();
+    const caption = md.utils.escapeHtml(captionRaw);
+
+    return { videoID, caption };
+  }
+
+  const videoID = raw.trim();
+  const captionFromNext = parseQuotedCaptionFromNextToken(nextToken, md);
+  if (!captionFromNext) return { videoID, caption: "" };
+
+  return { videoID, caption: captionFromNext };
+}
+
+function parseQuotedCaptionFromNextToken(nextToken, md) {
+  if (!nextToken || nextToken.type !== "text") return "";
+
+  const match = nextToken.content.match(/^\s*"([^"]+)"/);
+  if (!match) return "";
+
+  const captionRaw = match[1];
+  nextToken.content = nextToken.content.slice(match[0].length);
+  return md.utils.escapeHtml(captionRaw);
 }

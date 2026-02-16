@@ -216,9 +216,30 @@
 
   .figure__caption {
     margin-block-start: var(--space-2);
-    font-size: var(--font-size-fluid-x0);
+    font-size: var(--font-size-fluid-x2);
     color: var(--color-neutral-text);
     text-align: center;
+  }
+
+  .embed-responsive {
+    --video-max-width: 560px;
+    inline-size: min(100%, var(--video-max-width));
+    margin-inline: auto;
+  }
+
+  .embed-responsive-16by9 {
+    aspect-ratio: 16 / 9;
+  }
+
+  .embed-responsive-4by3 {
+    aspect-ratio: 4 / 3;
+  }
+
+  .embed-responsive-item {
+    inline-size: 100%;
+    block-size: 100%;
+    display: block;
+    border: 0;
   }
 
   .footnotes-sep {
