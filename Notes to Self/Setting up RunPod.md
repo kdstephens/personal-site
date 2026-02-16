@@ -23,7 +23,7 @@ Well, not this time. These are my notes for setting up RunPod.
 
 When I first started using RunPod, I would immediately go to the "Pods" page (it is called "RunPod" after all...), find a GPU powerful enough to complete my task, and then deploy it. Here's what the Pods page looks like as of this writing: 
 
-![Alt Runpod Pods page = 450x](assets/images/runpod_pods-page.png "RunPod 'Pods' page")
+![Alt Runpod Pods page =450x](assets/images/runpod_pods-page.png "RunPod 'Pods' page")
 
 There are two problems with this approach: 
 1. **Pods are expensive.** For the kinds of tasks I'm running, I need at least 24GB of VRAM, which requires a GPU that costs around $.40/hr. If I just left this running, that would be $9.60/day, or $67.20/week. It adds up quick. 
