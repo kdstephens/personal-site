@@ -12,7 +12,7 @@ export const sidebarSectionsCollection =
       .notesCollection(eleventyConfig)(collectionApi)
       .map((note) => ({
         ...note,
-        title: note.data.navTitle || note.title,
+        title: note.fileSlug,
       }));
 
     const sections = app.sidebar.sections.flatMap((section) => {

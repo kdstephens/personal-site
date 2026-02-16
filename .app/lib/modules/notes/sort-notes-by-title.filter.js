@@ -11,8 +11,8 @@ export const sortNotesByTitleFilter = () => {
    */
   return (collection) => {
     return collection.slice().sort((a, b) => {
-      const nameA = a.data.title || a.fileSlug;
-      const nameB = b.data.title || b.fileSlug;
+      const nameA = a.fileSlug;
+      const nameB = b.fileSlug;
       return nameA.localeCompare(nameB);
     });
   };

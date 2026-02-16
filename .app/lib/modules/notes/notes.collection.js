@@ -8,7 +8,7 @@ import { _notesCollection } from "./_notes.collection.js";
 export const notesCollection = (eleventyConfig) => (collectionApi) => {
   const notes = _notesCollection(eleventyConfig)(collectionApi);
   return notes.map((note) => ({
-    title: note.data.title || note.page.fileSlug,
+    title: note.page.fileSlug,
     tags: parseTags(note.data.tags),
     fileSlug: note.fileSlug,
     filePathStem: note.filePathStem,
