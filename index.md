@@ -18,6 +18,7 @@ The format is evolving, but for now the site is organized as follows:
  - 👉 [[Projects]]
  - 👉 [[Programs]]
  - 👉 [[Notes to Self]]
+ - 👉 [[Journal]]
 
 
 <!--<div class="intro-clear"></div>-->

@@ -79,6 +79,17 @@ export default defineConfig({
           },
         ],
       },
+      {
+        label: "",
+        groups: [
+          {
+            query: createNotesQuery({
+              pattern: "/Journal",
+              tree: true,
+            }),
+          },
+        ],
+      },
     ],
   },
   // tags: {
