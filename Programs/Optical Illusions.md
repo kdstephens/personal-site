@@ -1,25 +1,28 @@
 ---
-title: Optical Illusions Program
+title: |
+    Seeing is Believing:
+    Fun with Optical Illusions
 description: Educational program where I review how the eye works and several illusions related to depth, light and color. No screens used.  
 tags: perception, psychology, program
 ---
 
-This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. It's called:
-
-**Seeing is Believing: Fun with Optical Illusions**
+This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. 
 
 I've been presenting this at libraries around Los Angeles since May, 2024 and I very much enjoy it.
 
 There are no screens used, but there are several handouts: 
 
 > [!note]+ Handouts
-> Available for download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions) 
+> Download here: [github.com/kdstephens/illusions](https://github.com/kdstephens/illusions) 
 
 ### Upcoming Presentations
 
-`2026, January 29` &mdash; 4pm-5pm @ Westwood Branch Library, Los Angeles, CA
+None currently scheduled!
 
 ### Past Presentations
+
+> [!list]- 2026
+> `Jan 29` @ Westwood Branch Library, Los Angeles, CA
 
 > [!list]- 2025
 > `June 5` @ Atwater Village Branch Library, Los Angeles, CA
