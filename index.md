@@ -16,14 +16,14 @@ panel: false
 
 *Kyle?*
 
-That's me. This is my site. Here, I catalogue creative interests and pursuits, grouped as: 
+That's me. This is my site. Here, I catalogue creative interests and pursuits: 
  - 👉 [[Coding]]
  - 👉 [[Writing]]
  - 👉 [[Music]]
 
 May it surprise and delight whoever happens upon it. 
 
-By the way, `3F` is the hecidecimal representation for the question mark symbol ("?"). Hence, Kyle3F. Thanks Dave Eggers. 
+By the way, `3F` is the hexadecimal representation for the question mark symbol ("?"). Hence, Kyle3F. Thanks Dave Eggers. 
 
 ### Links out ↗
 
