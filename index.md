@@ -13,13 +13,11 @@ panel: false
   <footer>— Dave Eggers, <cite>Contrapposto</cite></footer>
 </blockquote>
 
-Jakob von Uexkül was a German biologist who introduced the notion of *Umwelt* &mdash; the idea that we all inhabit our own subjective islands of existence. 
-
-If that's the case, then this website is my message in a bottle, put out the world wide web. 
+Jakob von Uexkül was a German biologist who introduced the notion of *Umwelt* &mdash; the idea that we all inhabit our own subjective islands of existence. If that's the case, then this website is my message in a bottle, put out the world wide web. 
 
 May it surprise and delight whoever happens upon it. 
 
-The format is evolving, but for now the site is organized into three main categories:
+The format is evolving, but for now there are three main categories:
  - 👉 [[Coding]]
  - 👉 [[Writing]]
  - 👉 [[Music]]

@@ -7,6 +7,8 @@ const isWatchMode = args.includes("--watch");
 let bundler = new Parcel({
   entries: "css/app.scss",
   mode: isWatchMode ? "development" : "production",
+  // Recompile production CSS so nested Sass changes cannot reuse stale output.
+  shouldDisableCache: !isWatchMode,
   defaultConfig: "@parcel/config-default",
   // Ensure the custom CSS file outside the project root is watched
   // See https://github.com/parcel-bundler/parcel/issues/4332
