@@ -10,7 +10,7 @@ sort: 2
 >
 > (1) [[Setting up RunPod]]
 >
-> (3) [[Use tmux with Streamlit]]
+> (3) [[Using tmux with Streamlit]]
 
 For work, I often make backend APIs for clients (typically with [FastAPI](https://fastapi.tiangolo.com/)). 
 

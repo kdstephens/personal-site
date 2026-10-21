@@ -8,9 +8,9 @@ sort: 1
 > [!info]- First part of 3-part series
 > This is the first part in a 3-part series about using RunPod to share Streamlit apps. Here are the first two parts: 
 >
-> 2. [[Use Streamlit with RunPod]]
+> 2. [[Using Streamlit with RunPod]]
 >
-> 3. [[Use tmux with Streamlit]]
+> 3. [[Using tmux with Streamlit]]
 
 Sometimes &mdash; often as of late &mdash; I need to test machine-learning models that require compute resources beyond what my meager laptop can handle. This necessitates a cloud server with computational resources (i.e., GPUs). My go-to service is [RunPod](https://www.runpod.io/). However, no matter how many times I use it, I always encounter some "gotcha" that makes my work take longer than it should. Each time this happens, I think, "ah crap, I should write that down." And then I promptly ignore myself and write nothing. 
 

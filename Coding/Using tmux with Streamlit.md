@@ -8,7 +8,7 @@ sort: 3
 > [!info]- Third part of 3-part series
 > This is the third part in a 3-part series about using RunPod to share Streamlit apps. Here are the first two parts: 
 > 1. [[Setting up RunPod]]
-> 2. [[Use Streamlit with RunPod]]
+> 2. [[Using Streamlit with RunPod]]
 
 At this point in the series, I know how to set up a Streamlit app in RunPod and share it via an HTTP Service link. 🥳
 
@@ -45,7 +45,7 @@ I like to give my sessions a name, so I don't get confused later. I've called th
 ```shell
 ./start_streamlit.sh
 ```
-Following from the [[Use Streamlit with RunPod|previous article in this series]], I assume I started my tmux session form the `/workspace` folder on my Pod and I've already written a shell script (`start_streamlit.sh`) that starts the Streamlit app. 
+Following from the [[Using Streamlit with RunPod|previous article in this series]], I assume I started my tmux session form the `/workspace` folder on my Pod and I've already written a shell script (`start_streamlit.sh`) that starts the Streamlit app. 
 
 ### 5. Detach from tmux session:
 Hit `ctrl+b` on the keyboard, then type `d`. 

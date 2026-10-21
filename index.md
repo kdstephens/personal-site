@@ -1,32 +1,24 @@
 ---
 navTitle: Home
 title: 
-headline: An assortment of Kyle-related items.
+headline: Kyle?
 panel: false
 # nextPage: "[[Getting started]]"
 ---
 
-<!--## Kyle-related items. Assembled by Kyle himself.-->
+<img src="profile-pic-2.png" alt="Kyle portrait" class="intro-image-2" width="150" decoding="async">
 
-<!-- <img src="profile-pic.png" alt="Kyle waving" class="intro-image" width="175" decoding="async"> -->
+<blockquote>
+  <p>"His name is Kyle," Olympia said. "Nice enough guy, but that name: Kyle. Isn't that tragic? Would you buy art from someone named Kyle? Would you mount a retrospective of the work of <em>Kyle?</em> Every time I see him I think of his name in italics, with a question mark afterward."</p>
+  <footer>— Dave Eggers, <cite>Contrapposto</cite></footer>
+</blockquote>
 
-<img src="profile-pic-2.png" alt="Kyle waving" class="intro-image-2" width="150" decoding="async">
+Jakob von Uexkül was a German biologist who introduced the notion of *Umwelt* &mdash; the idea that we all inhabit our own subjective islands of existence. If that's the case, then this website is my message in a bottle, put out to the sea of the world wide web. May it surprise and delight whoever happens upon it. 
 
-This site is part portfolio, part journal, part catalogue of notes-to-self. In short, I put things here that I don't want to forget. 
-
-The format is evolving, but for now the site is organized as follows: 
- - 👉 [[Projects]]
- - 👉 [[Programs]]
- - 👉 [[Notes to Self]]
- - 👉 [[Journal]]
-
-
-<!--<div class="intro-clear"></div>-->
-
-<!-- ![Alt Me =x300](profile-pic.png)
-<div style="text-align: center;">
-    <img src="profile-pic.png" alt="Me" height="500" />
-</div> -->
+The format is evolving, but for now the site is organized into three main categories:
+ - 👉 [[Coding]]
+ - 👉 [[Writing]]
+ - 👉 [[Music]]
 
 ### Links out ↗
 

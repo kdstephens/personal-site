@@ -50,7 +50,7 @@ export default defineConfig({
         groups: [
           {
             query: createNotesQuery({
-              pattern: "/Projects",
+              pattern: "^/Coding(/|$)",
               tree: true,
             }),
           },
@@ -62,7 +62,7 @@ export default defineConfig({
         groups: [
           {
             query: createNotesQuery({
-              pattern: "/Programs",
+              pattern: "^/Writing(/|$)",
               tree: true,
             }),
           },
@@ -73,7 +73,7 @@ export default defineConfig({
         groups: [
           {
             query: createNotesQuery({
-              pattern: "/Notes to Self",
+              pattern: "^/Music(/|$)",
               tree: true,
             }),
           },
@@ -84,7 +84,7 @@ export default defineConfig({
         groups: [
           {
             query: createNotesQuery({
-              pattern: "/Journal",
+              pattern: "^/Optical Illusions$",
               tree: true,
             }),
           },
