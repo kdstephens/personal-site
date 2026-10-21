@@ -13,14 +13,17 @@ panel: false
   <footer>— Dave Eggers, <cite>Contrapposto</cite></footer>
 </blockquote>
 
-Jakob von Uexkül was a German biologist who introduced the notion of *Umwelt* &mdash; the idea that we all inhabit our own subjective islands of existence. If that's the case, then this website is my message in a bottle, put out the world wide web. 
 
-May it surprise and delight whoever happens upon it. 
+*Kyle?*
 
-The format is evolving, but for now there are three main categories:
+That's me. This is my site. Here, I catalogue creative interests and pursuits, grouped as: 
  - 👉 [[Coding]]
  - 👉 [[Writing]]
  - 👉 [[Music]]
+
+May it surprise and delight whoever happens upon it. 
+
+By the way, `3F` is the hecidecimal representation for the question mark symbol ("?"). Hence, Kyle3F. Thanks Dave Eggers. 
 
 ### Links out ↗
 
