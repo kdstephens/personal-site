@@ -30,6 +30,8 @@ export default /** @type {const} */ ({
   "panel.external_links.label": "External",
   "bookmark_toggle.label": "Bookmark",
   "edit_this_note.label": "Edit",
+  "article.published": "Published:",
+  "article.last_modified": "Last modified:",
   "page.tags.title": "Tags",
   "page.tag.title": "Tag:",
   "page.search.title": "Search",

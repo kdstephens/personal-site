@@ -3,6 +3,7 @@ import { notesCollection } from "./notes.collection.js";
 import { editThisNoteLinkFilter } from "./edit-this-note-link.filter.js";
 import { sortNotesByTitleFilter } from "./sort-notes-by-title.filter.js";
 import { copyCodeMarkdownPlugin } from "./copy-code.md-plugin.js";
+import { articleDatesFilter } from "./article-dates.filter.js";
 
 export const notesModule = {
   _notesCollection,
@@ -19,5 +20,6 @@ export const notesModule = {
 
     config.addFilter("editThisNoteLink", editThisNoteLinkFilter(config));
     config.addFilter("sortNotesByTitle", sortNotesByTitleFilter(config));
+    config.addFilter("articleDates", articleDatesFilter(config));
   },
 };

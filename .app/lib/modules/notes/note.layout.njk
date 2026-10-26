@@ -16,6 +16,13 @@
   <main class="page__main" id="app-content" >
     <article>
       <h1 class="page__title">{{ headline or title or page.fileSlug }}</h1>
+      {% if page.filePathStem != "/index" %}
+        {% set dates = page | articleDates(published, lastModified, app.lang) %}
+        <p class="article-dates" data-pagefind-ignore>
+          <span>{{ 'article.published' | t }} <time datetime="{{ dates.published.iso }}">{{ dates.published.label }}</time></span>
+          <span>{{ 'article.last_modified' | t }} <time datetime="{{ dates.lastModified.iso }}">{{ dates.lastModified.label }}</time></span>
+        </p>
+      {% endif %}
       <div class="article">
         {{ content | safe }}
       </div>

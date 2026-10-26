@@ -1,5 +1,20 @@
 @use "./../../../../css/2-lib/breakpoints" as *;
 
+.page__title:has(+ .article-dates) {
+  margin-block-end: var(--space-2);
+}
+
+.article-dates {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-5);
+  row-gap: var(--space-1);
+  margin-block-end: var(--space-6);
+  color: var(--color-neutral-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
 .article {
   & > * + * {
     margin-block-start: var(--flow-space, 1.5em);

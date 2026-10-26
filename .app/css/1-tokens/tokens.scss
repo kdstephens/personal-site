@@ -92,8 +92,8 @@ $neutral-color: map.get(themes.$neutrals, $theme-name);
   --space-8: 64px;
 
   --color-backdrop: #{ld("rgba(0, 0, 0, 0.25)", "rgba(0, 0, 0, 0.5)")};
-  --color-background: #{ld("#fff", color-value($neutral-color, 1, $dark: true))};
-  --color-surface: #{ld("#fff", color-value($neutral-color, 1, $dark: true))};
+  --color-background: #{ld("#fff", "#1e1e1e")};
+  --color-surface: #{ld("#fff", "#252526")};
 
   --color-primary-mark: #{step-alpha($primary-color, 5)};
 
