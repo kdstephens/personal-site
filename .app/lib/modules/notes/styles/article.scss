@@ -1,7 +1,11 @@
 @use "./../../../../css/2-lib/breakpoints" as *;
 
-.page__title:has(+ .article-dates) {
-  margin-block-end: var(--space-2);
+.article-header {
+  margin-block-end: var(--space-6);
+
+  .page__title {
+    margin-block-end: 0;
+  }
 }
 
 .article-dates {
@@ -9,9 +13,10 @@
   flex-wrap: wrap;
   column-gap: var(--space-5);
   row-gap: var(--space-1);
-  margin-block-end: var(--space-6);
+  margin-block-start: var(--space-1);
   color: var(--color-neutral-text);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
+  font-style: italic;
   line-height: 1.5;
 }
 

@@ -4,6 +4,8 @@ title: |
     Fun with Optical Illusions
 description: Educational program where I review how the eye works and several illusions related to depth, light and color. No screens used.  
 tags: perception, psychology, program
+published: 2026-01-09
+lastModified: 2026-02-16
 ---
 
 This is an educational program for all ages where I explain how the eye works and review several illusions related to depth, light, and color perception. 

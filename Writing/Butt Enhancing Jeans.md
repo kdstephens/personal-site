@@ -1,5 +1,7 @@
 ---
 title: That time I used vision science to make butts look good in jeans
+published: 2026-02-16
+lastModified: 2026-02-16
 description: Title says it all really 
 tags: perception, psychology, journal
 ---

@@ -15,14 +15,22 @@
 <div class="page" data-pagefind-body>
   <main class="page__main" id="app-content" >
     <article>
-      <h1 class="page__title">{{ headline or title or page.fileSlug }}</h1>
       {% if page.filePathStem != "/index" %}
         {% set dates = page | articleDates(published, lastModified, app.lang) %}
-        <p class="article-dates" data-pagefind-ignore>
-          <span>{{ 'article.published' | t }} <time datetime="{{ dates.published.iso }}">{{ dates.published.label }}</time></span>
-          <span>{{ 'article.last_modified' | t }} <time datetime="{{ dates.lastModified.iso }}">{{ dates.lastModified.label }}</time></span>
-        </p>
       {% endif %}
+      <header class="article-header">
+        <h1 class="page__title">{{ headline or title or page.fileSlug }}</h1>
+        {% if dates %}
+          <p class="article-dates" data-pagefind-ignore>
+            {% if dates.published %}
+              <span>{{ 'article.published' | t }} <time datetime="{{ dates.published.iso }}">{{ dates.published.label }}</time></span>
+            {% endif %}
+            {% if dates.lastModified %}
+              <span>{{ 'article.last_modified' | t }} <time datetime="{{ dates.lastModified.iso }}">{{ dates.lastModified.label }}</time></span>
+            {% endif %}
+          </p>
+        {% endif %}
+      </header>
       <div class="article">
         {{ content | safe }}
       </div>

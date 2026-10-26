@@ -1,5 +1,7 @@
 ---
 title: Setting up RunPod
+published: 2026-01-20
+lastModified: 2026-10-21
 description: What I've learned about setting up RunPod servers
 tags: ["notes to self", "machine learning", "runpod"]
 sort: 1

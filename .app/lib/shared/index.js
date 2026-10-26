@@ -5,6 +5,7 @@ import { createIcon } from "./icon.js";
 import { slugifyPathFilter } from "./slugify-path.filter.js";
 import { uniqueIdGlobal } from "./unique-id.global.js";
 import { ValueParser } from "./value-parser.js";
+import { assetUrlFilter } from "./asset-url.filter.js";
 
 export const sharedModule = {
   ValueParser,
@@ -19,6 +20,7 @@ export const sharedModule = {
     config.addFilter("icon", iconFilter(config));
     config.addFilter("iconRef", iconRefFilter(config));
     config.addFilter("slugifyPath", slugifyPathFilter(config));
+    config.addFilter("assetUrl", assetUrlFilter(config));
 
     config.addNunjucksGlobal("uniqueId", uniqueIdGlobal(config));
   },

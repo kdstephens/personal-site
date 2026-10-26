@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "npm-run-all clean -p css:watch js:watch 11ty:serve",
-    "build": "npm-run-all clean -p css:build js:build 11ty:build",
+    "build": "npm-run-all clean -p css:build js:build -s 11ty:build",
     "test": "node --test test/*.test.js",
     "11ty:serve": "eleventy --serve",
     "11ty:build": "eleventy",

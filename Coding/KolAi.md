@@ -1,5 +1,7 @@
 ---
 title: KolAi
+published: 2026-01-21
+lastModified: 2026-01-21
 description: "A company I started to make laser finishing files for denim using machine learning. The technology was acquired by another company at the end of 2025."
 tags: ["project", "machine learning", "denim"]
 sort: 2

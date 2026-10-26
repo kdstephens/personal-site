@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { mkdtempSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 import { after, test } from "node:test";
 import { articleDatesFilter } from "../lib/modules/notes/article-dates.filter.js";
 
@@ -64,13 +65,19 @@ test("front matter can override each date independently, including YAML dates", 
   assert.equal(filter(page, undefined, "2026-03-15").published.iso, "2026-01-20");
 });
 
-test("untracked articles fall back to the page date or explicit publication date", () => {
+test("untracked articles never use checkout dates as publication dates", () => {
   const { filter } = createFilter();
   const untrackedPage = { ...page, inputPath: join(directory, "New article.md") };
   writeFileSync(untrackedPage.inputPath, "# New article\n");
-  assert.equal(filter(untrackedPage).published.iso, "2026-10-26");
-  assert.equal(filter(untrackedPage).lastModified.iso, "2026-10-26");
-  assert.equal(filter(untrackedPage, "2026-10-01").lastModified.iso, "2026-10-01");
+  assert.equal(filter(untrackedPage), null);
+  assert.deepEqual(filter(untrackedPage, "2026-10-01"), {
+    published: { iso: "2026-10-01", label: "October 1, 2026" },
+    lastModified: null,
+  });
+  assert.deepEqual(filter(untrackedPage, undefined, "2026-10-02"), {
+    published: null,
+    lastModified: { iso: "2026-10-02", label: "October 2, 2026" },
+  });
 });
 
 test("source archives without a Git repository still render dates", () => {
@@ -79,7 +86,8 @@ test("source archives without a Git repository still render dates", () => {
     const archivePage = { ...page, inputPath: join(archive, "Article.md") };
     writeFileSync(archivePage.inputPath, "# Article\n");
     const { filter } = createFilter();
-    assert.equal(filter(archivePage).published.iso, "2026-10-26");
+    assert.equal(filter(archivePage), null);
+    assert.equal(filter(archivePage, "2025-12-01", "2026-01-02").published.iso, "2025-12-01");
     assert.equal(filter(archivePage, "2025-12-01", "2026-01-02").lastModified.iso, "2026-01-02");
   } finally {
     rmSync(archive, { recursive: true, force: true });
@@ -100,4 +108,27 @@ test("rebuilds refresh committed dates without resetting publication", () => {
   rebuild();
   assert.equal(filter(page).published.iso, "2026-01-20");
   assert.equal(filter(page).lastModified.iso, "2026-10-26");
+});
+
+test("shallow deployments use saved dates and never mistake the tip for publication", () => {
+  const checkout = mkdtempSync(join(tmpdir(), "article-shallow-"));
+  try {
+    execFileSync("git", ["clone", "--depth=1", pathToFileURL(directory).href, checkout], {
+      stdio: "pipe",
+    });
+    assert.equal(execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+      cwd: checkout,
+      encoding: "utf8",
+    }).trim(), "true");
+    const shallowPage = { ...page, inputPath: join(checkout, "Renamed article [1].md") };
+    const { filter } = createFilter();
+    assert.equal(filter(shallowPage), null);
+    assert.deepEqual(filter(shallowPage, "2026-01-20", "2026-01-25"), {
+      published: { iso: "2026-01-20", label: "January 20, 2026" },
+      lastModified: { iso: "2026-01-25", label: "January 25, 2026" },
+    });
+    assert.equal(filter(shallowPage, "2026-01-20").lastModified, null);
+  } finally {
+    rmSync(checkout, { recursive: true, force: true });
+  }
 });

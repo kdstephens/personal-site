@@ -1,5 +1,7 @@
 ---
 title: Using Streamlit with RunPod
+published: 2026-01-21
+lastModified: 2026-10-21
 description: How to set up a Streamlit App using RunPod
 tags: ["notes to self", "machine learning", "runpod", "streamlit"]
 sort: 2

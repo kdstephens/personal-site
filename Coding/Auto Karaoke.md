@@ -1,5 +1,7 @@
 ---
 title: Auto Karaoke
+published: 2026-01-20
+lastModified: 2026-01-21
 description: "A system that automatically makes a karaoke-style lyric video given an audio file for a song."
 tags: ["project", "machine learning", "music"]
 # mermaid: true

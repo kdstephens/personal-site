@@ -1,5 +1,7 @@
 ---
 title: Using tmux with Streamlit
+published: 2026-01-21
+lastModified: 2026-10-21
 description: Notes about using tmux to ensure persistence of Streamlit apps on RunPod
 tags: ["notes to self", "machine learning", "runpod", "streamlit", "tmux"]
 sort: 3
